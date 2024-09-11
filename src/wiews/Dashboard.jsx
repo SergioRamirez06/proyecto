@@ -1,6 +1,5 @@
 
 import { Line, Pie } from "react-chartjs-2";
-// reactstrap components
 import {
   Card,
   CardHeader,
