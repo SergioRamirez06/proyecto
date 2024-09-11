@@ -1,15 +1,13 @@
 import React, { useRef, useState } from "react";
 import PerfectScrollbar from "perfect-scrollbar";
-// PerfectScrollbar
 import { Route, Routes, useLocation } from "react-router-dom";
 import { DemoNavbar, FixedPlugin, Footer,Sidebar } from "../components";
 import routes from "../routes";
 
-
 var ps;
 
 export const Admin = (props) => {
-
+//useState
   const [backgroundColor, setBackgroundColor] = useState("black");
   const [activeColor, setActiveColor] = useState("info");
 
