@@ -144,4 +144,3 @@ export const FixedPlugin = (props) => {
   );
 }
 
-export default FixedPlugin;

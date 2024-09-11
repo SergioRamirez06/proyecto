@@ -3,7 +3,6 @@ import { NavLink, useLocation } from "react-router-dom";
 import { Nav } from "reactstrap";
 import PerfectScrollbar from "perfect-scrollbar";
 
-// primer error no solucionado
 import logo from "../assets/logo.svg";
 var ps;
 
