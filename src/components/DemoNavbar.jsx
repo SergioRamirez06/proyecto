@@ -70,7 +70,7 @@ export const DemoNavbar = (props) => {
     }
   }, [location]);
   return (
-    // add or remove classes depending if we are on full-screen-maps page or not
+    
     <Navbar
       color={
         location.pathname.indexOf("full-screen-maps") !== -1 ? "dark" : color
@@ -83,7 +83,7 @@ export const DemoNavbar = (props) => {
             (color === "transparent" ? "navbar-transparent " : "")
       }
     >
-      <Container fluid>
+      <Container fluid >
         <div className="navbar-wrapper">
           <div className="navbar-toggle">
             <button
@@ -104,54 +104,9 @@ export const DemoNavbar = (props) => {
           <span className="navbar-toggler-bar navbar-kebab" />
           <span className="navbar-toggler-bar navbar-kebab" />
         </NavbarToggler>
-        <Collapse isOpen={isOpen} navbar className="justify-content-end">
-          <form>
-            <InputGroup className="no-border">
-              <Input placeholder="Search..." />
-              <InputGroupText>
-                <i className="nc-icon nc-zoom-split" />
-              </InputGroupText>
-            </InputGroup>
-          </form>
-          <Nav navbar>
-            <NavItem>
-              <Link to="#pablo" className="nav-link btn-magnify">
-                <i className="nc-icon nc-layout-11" />
-                <p>
-                  <span className="d-lg-none d-md-block">Stats</span>
-                </p>
-              </Link>
-            </NavItem>
-            <Dropdown
-              nav
-              isOpen={dropdownOpen}
-              toggle={(e) => dropdownToggle(e)}
-            >
-              <DropdownToggle caret nav>
-                <i className="nc-icon nc-bell-55" />
-                <p>
-                  <span className="d-lg-none d-md-block">Some Actions</span>
-                </p>
-              </DropdownToggle>
-              <DropdownMenu end>
-                <DropdownItem tag="a">Action</DropdownItem>
-                <DropdownItem tag="a">Another Action</DropdownItem>
-                <DropdownItem tag="a">Something else here</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-            <NavItem>
-              <Link to="#pablo" className="nav-link btn-rotate">
-                <i className="nc-icon nc-settings-gear-65" />
-                <p>
-                  <span className="d-lg-none d-md-block">Account</span>
-                </p>
-              </Link>
-            </NavItem>
-          </Nav>
-        </Collapse>
       </Container>
     </Navbar>
   );
-}
+};
 
 

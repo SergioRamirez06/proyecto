@@ -1,63 +1,68 @@
 
 import { 
-  Dashboard, 
-  Icons, 
-  Notifications, 
-  User, 
-  Tables, 
-  Typography,
-  Upgrade } from "./wiews";
+  Inicio,
+  Medicamentos,
+  Emergencia, 
+  Usuario,
+  Salud,
+  Asistente,
+  Recordatorio} from "./wiews";
 
-var routes = [
+
+const routes = [
+
+
+  //menu
   {
-    path: "/dashboard",
-    name: "Dashboard",
+    path: "/vitalsave",
+    name: "Inicio",
+    icon: "nc-icon nc-shop",
+    component: Inicio,
+    layout: "/inicio",
+  },
+  {
+    path: "/medicamentos",
+    name: "Medicamentos",
     icon: "nc-icon nc-bank",
-    component: Dashboard,
-    layout: "/admin",
+    component: Medicamentos,
+    layout: "/inicio",
   },
   {
-    path: "/icons",
-    name: "Icons",
-    icon: "nc-icon nc-diamond",
-    component: Icons,
-    layout: "/admin",
+    path: "/salud",
+    name: "Salud",
+    icon: "nc-icon nc-sound-wave",
+    component: Salud,
+    layout: "/inicio",
   },
   {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "nc-icon nc-bell-55",
-    component: Notifications,
-    layout: "/admin",
+    path: "/asistente",
+    name: "Asistente",
+    icon: "nc-icon nc-circle-10",
+    component: Asistente,
+    layout: "/inicio",
   },
   {
-    path: "/user-page",
-    name: "User Profile",
+    path: "/recordatorio",
+    name: "Recordatorio",
+    icon: "nc-icon nc-time-alarm",
+    component: Recordatorio,
+    layout: "/inicio",
+  },
+  {
+    path: "/emergencia",
+    name: "emergencia",
+    icon: "nc-icon nc-ambulance",
+    component: Emergencia,
+    layout: "/inicio",
+  },
+  {
+    path: "/usuario",
+    name: "Usuario",
     icon: "nc-icon nc-single-02",
-    component: User,
-    layout: "/admin",
+    component: Usuario,
+    layout: "/inicio",
   },
-  {
-    path: "/tables",
-    name: "Table List",
-    icon: "nc-icon nc-tile-56",
-    component: Tables,
-    layout: "/admin",
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "nc-icon nc-caps-small",
-    component: Typography,
-    layout: "/admin",
-  },
-  {
-    pro: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "nc-icon nc-spaceship",
-    component: Upgrade ,
-    layout: "/admin",
-  },
+
+
 ];
 export default routes;

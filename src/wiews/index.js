@@ -1,9 +1,22 @@
-export * from './Dashboard'
-export * from './Icons'
-export * from './Notifications'
-export * from './Tables'
-export * from './Typography'
-export * from './User'
-export * from './Upgrade'
+
+
+//MENU
+export * from './Inicio';
+export * from './Medicamentos';
+export * from './Emergencia';
+export * from './Usuario';
+export * from './Asistente';
+export * from './Recordatorio';
+export * from './Salud';
+
+
+
+
+
+
+
+
+
+
 
 

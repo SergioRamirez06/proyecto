@@ -2,8 +2,6 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Nav } from "reactstrap";
 import PerfectScrollbar from "perfect-scrollbar";
-
-import logo from "../assets/logo.svg";
 var ps;
 
 export const Sidebar = (props) => {
@@ -30,6 +28,7 @@ export const Sidebar = (props) => {
       }
     };
   });
+  const logoVitalSave = "../src/assets//Logo de oftalmólogo sencillo azul y naranja.png"
 
 
   return (
@@ -44,14 +43,14 @@ export const Sidebar = (props) => {
           className="simple-text logo-mini"
         >
           <div className="logo-img">
-            <img src={logo} alt="react-logo" />
+            <img src={ logoVitalSave } alt="react-logo" />
           </div>
         </a>
-        <a
-          href="https://www.creative-tim.com"
+        <a href="#"
+        
           className="simple-text logo-normal"
         >
-          Creative Tim
+          VitalSave
         </a>
       </div>
       <div className="sidebar-wrapper" ref={sidebar}>

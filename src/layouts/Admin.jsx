@@ -1,13 +1,15 @@
 import React, { useRef, useState } from "react";
 import PerfectScrollbar from "perfect-scrollbar";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { DemoNavbar, FixedPlugin, Footer,Sidebar } from "../components";
+import { DemoNavbar, Footer,Sidebar } from "../components";
 import routes from "../routes";
+
 
 var ps;
 
 export const Admin = (props) => {
-//useState
+
+
   const [backgroundColor, setBackgroundColor] = useState("black");
   const [activeColor, setActiveColor] = useState("info");
 
@@ -32,14 +34,6 @@ export const Admin = (props) => {
     mainPanel.current.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
   }, [location]);
-  const handleActiveClick = (color) => {
-    setActiveColor(color);
-  };
-  const handleBgClick = (color) => {
-    setBackgroundColor(color);
-  };
-
-
 
   return (
     <div className="wrapper">
@@ -56,7 +50,7 @@ export const Admin = (props) => {
             return (
               <Route
                 path={prop.path}
-                element={prop.component}
+                element={<prop.component />}
                 key={key}
                 exact
               />
@@ -65,12 +59,6 @@ export const Admin = (props) => {
         </Routes>
         <Footer fluid />
       </div>
-      <FixedPlugin
-        bgColor={backgroundColor}
-        activeColor={activeColor}
-        handleActiveClick={handleActiveClick}
-        handleBgClick={handleBgClick}
-      />
     </div>
   );
 }
